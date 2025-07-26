@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="#2B5F59">
+
+    <!-- Üst Menü: Oyuncular ve test -->
+    <LinearLayout
+        android:id="@+id/playerNameAndSkorMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="3"
+        android:background="#00FFFC">
+
+        <!-- Player One (alt alta) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/PlayerOneNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TextgamerName"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/playerOneSkorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TextSkor"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/PickPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/PickPlayer"
+            android:scaleType="fitCenter"
+            android:src="@drawable/leftarrow"
+            tools:ignore="ImageContrastCheck" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/PlayerTwoNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TextgamerName"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/playerTwoSkorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TextSkor"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <GridLayout
+        android:id="@+id/gameBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+
+        app:layout_constraintTop_toBottomOf="@id/playerNameAndSkorMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageView
+            android:id="@+id/buttonOne"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/box"
+            tools:ignore="ImageContrastCheck"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonOne" />
+
+        <ImageView
+            android:id="@+id/buttonTwo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonTwo" />
+
+        <ImageView
+            android:id="@+id/buttonThree"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonThree" />
+
+        <ImageView
+            android:id="@+id/buttonFour"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonFour" />
+
+        <ImageView
+            android:id="@+id/buttonFive"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonFive" />
+
+        <ImageView
+            android:id="@+id/buttonSix"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonSix" />
+
+        <ImageView
+            android:id="@+id/buttonSeven"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonSeven" />
+
+        <ImageView
+            android:id="@+id/buttonEight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonEight" />
+
+        <ImageView
+            android:id="@+id/buttonNine"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:onClick="buttonSelect"
+            android:contentDescription="@string/ButtonNine" />
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

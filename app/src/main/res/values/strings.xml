@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">XoXGame</string>
+    <string name="GameGif">GameGif</string>
+    <string name="PlayerSelectedButton">PlayerSelectedButton</string>
+    <string name="FirstPlayerName">Birinci Oyuncunun Adı</string>
+    <string name="SecondPlayerName">Ikinci Oyunucunun Adı</string>
+    <string name="WhoIsTheStartPlayer">Oyuna Kim Başlasın</string>
+    <string name="First_Player">Oyuncu 1</string>
+    <string name="Second_Player">Oyuncu 2</string>
+    <string name="TextSkor">Skor:</string>
+    <string name="TextgamerName">GamerName</string>
+    <string name="PickPlayer">Secilen Oyuncu</string>
+    <string name="ButtonOne">buttonOne</string>
+    <string name="ButtonTwo">buttonTwo</string>
+    <string name="ButtonThree">buttonThree</string>
+    <string name="ButtonFour">buttonFour</string>
+    <string name="ButtonFive">buttonFive</string>
+    <string name="ButtonSix">buttonSix</string>
+    <string name="ButtonSeven">buttonSeven</string>
+    <string name="ButtonEight">buttonEight</string>
+    <string name="ButtonNine">buttonNine</string>
+
+</resources>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00B3C7"
+    tools:context=".MainActivity"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="20dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/GifMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/GameGif"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:contentDescription="@string/GameGif"
+            android:scaleType="fitCenter"
+            tools:ignore="ImageContrastCheck"
+
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/SelectedPlayerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/SelectedPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp"
+            >
+
+            <ImageButton
+                android:id="@+id/OnePlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/PlayerSelectedButton"
+                android:onClick="onePlayerClick"
+                android:src="@drawable/oneplayer"
+                tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/TwoPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/PlayerSelectedButton"
+                android:onClick="twoPlayerClick"
+                android:src="@drawable/twoplayer"
+                tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SelectedPlayerCancel"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/SelectedPlayerCancelImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/PlayerSelectedButton"
+                android:onClick="selectedBack"
+                android:scaleType="fitCenter"
+                android:src="@drawable/leftarrow"
+                tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/SelectedGameSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/SelectedPlayerMenu"
+        tools:layout_editor_absoluteX="3dp">
+
+        <LinearLayout
+            android:id="@+id/SelectedGameSettingOneName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/SelectedPlayerMenu"
+            tools:layout_editor_absoluteX="3dp">
+
+            <ImageView
+                android:id="@+id/OnePlayerImage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/GameGif"
+                android:scaleType="fitCenter"
+                android:src="@drawable/oneplayer"
+                tools:ignore="ImageContrastCheck" />
+
+            <EditText
+                android:id="@+id/PlayerOneName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:hint="@string/FirstPlayerName"
+                android:inputType="text"
+                android:maxLength="16"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:textColorHint="#263238"
+                android:textSize="14sp"
+                tools:ignore="NestedWeights" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="32dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/SelectedGameSettingTwoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/SelectedPlayerMenu"
+            tools:layout_editor_absoluteX="3dp">
+
+            <ImageView
+                android:id="@+id/TwoPlayerImage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/GameGif"
+                android:scaleType="fitCenter"
+                android:src="@drawable/twoplayer"
+                tools:ignore="ImageContrastCheck" />
+
+            <EditText
+                android:id="@+id/PlayerTwoName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/SecondPlayerName"
+                android:inputType="text"
+                android:maxLength="16"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:textColorHint="#263238"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SelectedGameSettingBot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/SelectedPlayerMenu"
+            tools:layout_editor_absoluteX="3dp">
+
+            <ImageView
+                android:id="@+id/BotSettingEasy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/GameGif"
+                android:onClick="botEasy"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/easy"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/BotSettingHard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/GameGif"
+                android:onClick="botHard"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hard"
+                app:layout_constraintTop_toBottomOf="@+id/BotSettingEasy"
+                tools:ignore="ImageContrastCheck"
+
+                />
+
+            <ImageView
+                android:id="@+id/BotSettingBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/GameGif"
+                android:onClick="botSelectedBack"
+                android:scaleType="fitCenter"
+                android:src="@drawable/leftarrow"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/BotSettingHard"
+                tools:ignore="ImageContrastCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/StartButtonMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/SelectedGameSetting"
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageButton
+            android:id="@+id/StartButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:contentDescription="@string/PlayerSelectedButton"
+            android:onClick="startGameClick"
+            android:src="@drawable/start" />
+    </LinearLayout>
+
+
+</LinearLayout>
