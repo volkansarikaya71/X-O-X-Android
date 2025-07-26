@@ -23,3 +23,5 @@ Bot modunda, oyuncu hamlesi sonrası bot otomatik hamle yapar.
 Oyun bittiğinde kazanan ya da beraberlik durumu gösterilir.
 
 "Yeniden Başlat" ile yeni oyun başlayabilir.
+
+https://www.volkansarikaya.com/
